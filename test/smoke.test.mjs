@@ -175,7 +175,7 @@ test("stdio: initialize, tools/list, convert, fx_rates_for, resource, prompt", a
   assert.match(got.result.messages[0].content.text, /invoice_create/);
 });
 
-test.skip("free: a 91-day history window is shortened to 90 days and answered, cap named", async (t) => {
+test("free: a 91-day history window is shortened to 90 days and answered, cap named", async (t) => {
   const { srv, url } = await ecbServer();
   t.after(() => srv.close());
   const c = client({ ECB_BASE_URL: url });
