@@ -1,13 +1,45 @@
 # mcp-currency
 
+<!-- mirror-seo:start -->
+
+**MCP server for currency conversion, a currency converter and FX rates from the ECB.** ECB reference rates: convert, history, and fx_rates for rebilling.
+
+Works with Claude Desktop, Claude Code, Cursor and any Model Context Protocol client. Runs on your own machine, or hosted with no install.
+
+## Install
+
+**Hosted, nothing to install.** Point an MCP client at `https://mcp.zovo.one/mcp/currency` over streamable-http and send `Authorization: Bearer <token>`, where the token is a Pro key or a free anonymous one from <https://mcp.zovo.one/mcp/token>.
+
+**Claude Desktop, one click.** Download `currency.mcpb` from the [latest release](https://github.com/theluckystrike/mcp-servers/releases/latest) and double-click it.
+
+**From source.** The mirror is self-contained: every `@theluckystrike/*` dependency is vendored, so a fresh clone builds with no extra setup.
+
+```sh
+git clone https://github.com/theluckystrike/mcp-currency.git
+cd mcp-currency
+npm install && npm run build
+```
+
+Then point your client at the built entry point:
+
+```json
+{
+  "mcpServers": {
+    "currency": {
+      "command": "node",
+      "args": ["/absolute/path/to/mcp-currency/dist/index.js"]
+    }
+  }
+}
+```
+
+> `@theluckystrike/mcp-currency` is **not published on npm yet**, so an `npx -y @theluckystrike/mcp-currency` command will fail. The three paths above are the working ones and each is exercised by CI.
+
 ![currency demo](https://raw.githubusercontent.com/theluckystrike/mcp-servers/main/assets/demo-currency.gif)
-
-**One-click install:** download `currency.mcpb` from the [latest release](https://github.com/theluckystrike/mcp-servers/releases/latest) and double-click it in Claude Desktop.
-
-**Hosted endpoint (no install):** `https://mcp.zovo.one/mcp/currency` (streamable-http; send `Authorization: Bearer <Pro key or anonymous token from https://mcp.zovo.one/mcp/token>`).
 
 Read-only mirror of [mcp-servers/servers/currency](https://github.com/theluckystrike/mcp-servers/tree/main/servers/currency). See [MIRROR.md](MIRROR.md).
 
+<!-- mirror-seo:end -->
 
 Ask your assistant what something is worth in another currency and get a real answer with a date on it. It reads the European Central Bank's daily euro foreign exchange reference rates -- the same published series banks, tax authorities and accountants use -- converts amounts between any of the currencies the ECB quotes, and shows how a pair has moved over time. There is no API key, no account and no rate limit, because the ECB publishes the file openly. Both files are cached on your own machine, so after the first download every answer is instant and the server keeps working on a plane. Every answer states which rate date it used, because ECB rates are published once a day and a Sunday carries Friday's rate.
 
