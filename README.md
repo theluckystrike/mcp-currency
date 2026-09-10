@@ -2,7 +2,7 @@
 
 <!-- mirror-seo:start -->
 
-**MCP server for currency conversion, a currency converter and FX rates from the ECB.** ECB reference rates: convert, history, and fx_rates for rebilling.
+**MCP server for currency conversion: convert currencies with a currency converter on real ECB exchange rates.** ECB reference rates: convert, history, and fx_rates for rebilling.
 
 Works with Claude Desktop, Claude Code, Cursor and any Model Context Protocol client. Runs on your own machine, or hosted with no install.
 
