@@ -1,0 +1,22 @@
+{
+  "name": "mcp-currency",
+  "version": "0.21.0",
+  "description": "MCP server for currency conversion: convert currencies with a currency converter on real ECB exchange rates. ECB reference rates: convert, history, and fx_rates for rebilling.",
+  "settings": [
+    {
+      "name": "mcp.zovo.one token",
+      "description": "A free anonymous token from https://mcp.zovo.one/mcp/token, or your Pro key. One token is one data space, and it is refreshed for another 30 days on every write.",
+      "envVar": "ZOVO_MCP_TOKEN",
+      "sensitive": true
+    }
+  ],
+  "mcpServers": {
+    "currency": {
+      "httpUrl": "https://mcp.zovo.one/mcp/currency",
+      "headers": {
+        "Authorization": "Bearer ${ZOVO_MCP_TOKEN}"
+      },
+      "description": "ECB reference rates: convert, history, and fx_rates for rebilling."
+    }
+  }
+}
