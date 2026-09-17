@@ -1,6 +1,6 @@
 {
   "name": "mcp-currency",
-  "version": "0.21.0",
+  "version": "0.22.0",
   "description": "MCP server for currency conversion: convert currencies with a currency converter on real ECB exchange rates. ECB reference rates: convert, history, and fx_rates for rebilling.",
   "settings": [
     {
