@@ -179,3 +179,5 @@ your currencies or your machine is sent anywhere. The cache lives in
 `ECB_BASE_URL` to point at your own mirror if outbound access is restricted.
 
 MIT licensed. Support: support@zovo.one. Built by [theluckystrike](https://github.com/theluckystrike).
+
+**Listed on the [AI Product Index](https://index.percall.dev/l/zovo-currency.html)** — live remote endpoint at [mcp.zovo.one/s/currency](https://mcp.zovo.one/s/currency), free tier, no signup.
