@@ -1,0 +1,23 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.theluckystrike/currency",
+  "description": "Convert currencies on the daily European Central Bank reference rates. No API key, no signup.",
+  "version": "0.22.1",
+  "repository": {
+    "url": "https://github.com/theluckystrike/mcp-servers",
+    "source": "github",
+    "subfolder": "servers/currency"
+  },
+  "websiteUrl": "https://mcp.zovo.one/s/currency",
+  "packages": [
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/currency.mcpb",
+      "version": "0.22.0",
+      "fileSha256": "3ca7e74d4e919c9179af451288dc1ff04a3378bbb45b93daed4a62bca7444ea6",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
